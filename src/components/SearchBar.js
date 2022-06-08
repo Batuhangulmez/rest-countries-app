@@ -8,6 +8,7 @@ const searchBar = ({ countries, setFilteredData }) => {
     let result = [];
 
     result = countries.filter((country) => {
+      console.log(country);
       return String(country.capital).toLowerCase().startsWith(value);
     });
 
@@ -38,24 +39,34 @@ const searchBar = ({ countries, setFilteredData }) => {
       setFilteredData(empty);
     }
   };
+
+  const propertyValueControl = (country, value) => {
+    let result = [];
+
+    result = Object.values(country).filter((item) => {
+      return String(item).toLowerCase().startsWith(value);
+    });
+    return result == "" ? false : true;
+  };
+
+  const setData = (result) => {
+    if (result != "") setFilteredData(result);
+  };
+
   const apiSearch = (event) => {
     let value = event.target.value.toLowerCase();
     let result = [];
 
     result = countries.filter((country) => {
-      return String(Object.values(country)).toLowerCase().startsWith(value);
+      if (propertyValueControl(country, value)) return country;
     });
 
-    setFilteredData(result);
+    setData(result);
 
     if (result == "") {
       var empty = [{ name: "Arama Bulunamadı" }];
       setFilteredData(empty);
     }
-  };
-
-  const checkFunc = (data) => {
-    console.log(Object.entries(data));
   };
 
   return (
