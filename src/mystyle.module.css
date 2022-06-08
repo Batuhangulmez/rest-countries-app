@@ -1,0 +1,69 @@
+:root {
+  --mainBGColor: #071d34;
+  --SecondaryBGColor: #1c3146;
+  --textColor: #1eebb3;
+}
+
+/* Home Page */
+.Homepage {
+  padding-inline: 8rem;
+}
+.Homepage img {
+  height: 50px;
+}
+.Homepage .Table thead {
+  color: var(--textColor);
+  background: fixed;
+}
+.Homepage .Table thead tr {
+  border-bottom: 2px solid;
+}
+.Homepage .Table tr {
+  border: none;
+}
+.Homepage .Table tbody {
+  border: none;
+}
+.Homepage .Table tr th {
+  border: none;
+  background: none;
+}
+.Homepage .Table tr:nth-child(2n) td {
+  border: none;
+  background: var(--SecondaryBGColor);
+}
+.Homepage .Table tr td {
+  border: none;
+  background: var(--mainBGColor);
+}
+
+/* searchBar */
+.searchBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--SecondaryBGColor);
+  height: 10vh;
+}
+.searchBar .label {
+  width: 100%;
+  color: white;
+  background-color: var(--SecondaryBGColor);
+  margin-bottom: 3px;
+}
+.searchBar .Control {
+  border: none;
+  background-color: var(--mainBGColor);
+  color: white;
+}
+/* Loading */
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--mainBGColor);
+  height: 100vh;
+  font-size: xx-large;
+  color: var(--textColor);
+}
