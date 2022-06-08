@@ -10,8 +10,6 @@ const Homepage = () => {
   const [countries, setCountries] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
 
-  const [capitalSearch, setCapitalSearch] = useState("");
-
   const fetchData = async () => {
     const { data } = await api.fetchAllData();
     setCountries(data);
@@ -23,13 +21,7 @@ const Homepage = () => {
 
   return (
     <div>
-      <SearchBar
-        countries={countries}
-        setCountries={setCountries}
-        capitalSearch={capitalSearch}
-        setCapitalSearch={setCapitalSearch}
-        setFilteredData={setFilteredData}
-      />
+      <SearchBar countries={countries} setFilteredData={setFilteredData} />
       <div className={styles.Homepage}>
         {countries == "" ? (
           <Loading />

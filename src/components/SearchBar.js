@@ -1,14 +1,8 @@
 import React from "react";
-import { Form, FormControl, InputGroup } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import styles from "../mystyle.module.css";
 
-const searchBar = ({
-  countries,
-  setCountries,
-  capitalSearch,
-  setCapitalSearch,
-  setFilteredData,
-}) => {
+const searchBar = ({ countries, setFilteredData }) => {
   const capitalSearchChange = (event) => {
     let value = event.target.value.toLowerCase();
     let result = [];
@@ -48,11 +42,11 @@ const searchBar = ({
   return (
     <section className={styles.searchBar}>
       <Form.Group className="" controlId="exampleForm.ControlInput1">
-        <Form.Label className={styles.label}>Capital</Form.Label>
+        <Form.Label className={styles.label}>Capital Türünde Arama</Form.Label>
         <Form.Control
           className={styles.Control}
           type="text"
-          placeholder="Capital"
+          placeholder="Capital Türünde Arama"
           onChange={capitalSearchChange}
         />
       </Form.Group>
