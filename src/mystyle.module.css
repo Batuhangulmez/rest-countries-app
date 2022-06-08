@@ -21,6 +21,10 @@
 .Homepage .Table tr {
   border: none;
 }
+.Homepage .Table tr:hover:nth-child(n) td {
+  border: none;
+  background-color: #1eebb43d;
+}
 .Homepage .Table tbody {
   border: none;
 }
@@ -33,6 +37,7 @@
   background: var(--SecondaryBGColor);
 }
 .Homepage .Table tr td {
+  transition: linear 0.5s;
   border: none;
   background: var(--mainBGColor);
 }

@@ -27,7 +27,7 @@ const Homepage = () => {
           <Loading />
         ) : (
           <div>
-            <Table className={styles.Table} bordered hover variant="dark">
+            <Table className={styles.Table} bordered variant="dark">
               <thead>
                 <tr>
                   <th>#</th>
