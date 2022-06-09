@@ -4,6 +4,7 @@ import SearchBar from "./SearchBar";
 import styles from "../mystyle.module.css";
 
 import * as api from "../axios";
+import axios from "axios";
 import { Table } from "react-bootstrap";
 
 const Homepage = () => {
@@ -16,7 +17,9 @@ const Homepage = () => {
   };
 
   useEffect(() => {
-    fetchData();
+    return () => {
+      fetchData();
+    };
   }, []);
 
   return (

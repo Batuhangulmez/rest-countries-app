@@ -6,7 +6,7 @@ function App() {
     <Router>
       <div style={{ backgroundColor: "#071d34", minHeight: "100vh" }}>
         <Routes>
-          <Route index path="/" element={<Homepage />} />
+          <Route index path="" element={<Homepage />} />
         </Routes>
       </div>
     </Router>
